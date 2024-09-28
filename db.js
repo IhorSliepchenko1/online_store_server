@@ -1,0 +1,23 @@
+const { Sequelize } = require(`sequelize`);
+
+module.exports = new Sequelize(
+  process.env.DB_NAME,
+  process.env.DB_USER,
+  process.env.DB_PASSWORD,
+  {
+    dialect: `postgres`,
+    host: process.env.DB_HOST,
+    posrt: process.env.DB_PORT,
+  }
+);
+
+// module.exports = new Sequelize(
+// название бд,
+// имя юзера,
+// пароль,
+// {
+// dialect: какую базу юзаем,
+// host: localhost,
+// posrt: 5000
+// }
+// );
