@@ -1,5 +1,5 @@
 const { Brand } = require(`../models/models`);
-const ApiError = require(`../error/ApiError`);
+// const ApiError = require(`../error/ApiError`);
 
 class BrandController {
   async create(req, res) {
@@ -7,6 +7,7 @@ class BrandController {
     const brand = await Brand.create({ name });
     return res.json(brand);
   }
+
   async getAll(req, res) {
     const brands = await Brand.findAll();
     return res.json(brands);
